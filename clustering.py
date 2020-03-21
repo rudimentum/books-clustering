@@ -3,6 +3,7 @@ import numpy as np
 #2d model
 import matplotlib.pyplot as plt
 
+# words count, reviews count, year
 data = np.array([ 
 					[10201,34158,1943],
 					[95022,43814,1937],
@@ -45,6 +46,7 @@ data = np.array([
 					[112085,45872,2001],
 ])
 
+#titles of books
 labels = np.array([
 					"The Little Prince", 
 					"The Hobbit",
@@ -86,3 +88,17 @@ labels = np.array([
 					"East of Eden",
 					"Life of Pi"
 					])
+
+N_CLUSTERS = 5
+
+kmeans = KMeans(init='k-means++', n_clusters=N_CLUSTERS, n_init=10)
+kmeans.fit(data)
+pred_classes = kmeans.predict(data)
+
+centroids = kmeans.cluster_centers_
+print(centroids)
+
+for cluster in range(N_CLUSTERS):
+    print('cluster: ', cluster)
+    print(labels[np.where(pred_classes == cluster)])
+  
