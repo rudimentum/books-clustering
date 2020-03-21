@@ -102,3 +102,9 @@ for cluster in range(N_CLUSTERS):
     print('cluster: ', cluster)
     print(labels[np.where(pred_classes == cluster)])
   
+#2d model
+plt.figure(figsize=(6,4))
+plt.scatter(centroids[:, 0], centroids[:, 1], c='red', s=50)
+plt.scatter(data[:,0], data[:,1], c= kmeans.labels_.astype(float))
+plt.title('K-Means Clustering')
+plt.show()
