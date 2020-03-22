@@ -1,7 +1,7 @@
 # books-clustering
-Cluster books with k-means clustering. <br>
+Cluster books with k-means clustering. I followed the instructions from https://mubaris.com/posts/kmeans-clustering.<br>
 The books were randomly selected. I use the following data about books for clusterization: 
-* words count (http://wordcounters.com/word-count/results/), 
+* words count (http://wordcounters.com), 
 * reviews count (https://www.goodreads.com), 
 * year of publication. 
 
