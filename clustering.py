@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 #3d model
 from mpl_toolkits.mplot3d import Axes3D
 
-N_CLUSTERS = 5
+N_CLUSTERS = int(input("Count of clusters: "));
 
 # words count, reviews count, year
 data = np.genfromtxt(fname='data.csv',delimiter=';',dtype=float, usecols=(1,2,3))
